@@ -1,4 +1,6 @@
-# sorted
+# Sorted!
+
+"Sorted!" - Inspector Grim, The Thin Blue Line
 
 An ASP.NET web service that allows for a demonstration and comparison between different sorting algorithms.
 
