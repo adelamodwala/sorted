@@ -15,19 +15,20 @@ namespace SorterTests.tests.Sorter
         public virtual void RunBaseTests()
         {
             Console.WriteLine("**************{0}**************", TestSorter.GetType().Name);
-            AssertEmpty<int>();
+            AssertSortEmpty<int>();
+            AssertMinMaxEmpty<int>();
 
-            AssertSingle<int>(new int[] {54});
-            AssertSingle<string>(new string[] { "bob" });
+            AssertSortSingle<int>(new int[] {54});
+            AssertSortSingle<string>(new string[] { "bob" });
 
-            AssertSimple<int>(new int[] {26, 32, 12, 195, 7});
-            AssertSimple<string>(new string[] { "Rob", "Pearl", "Crystal", "Amethyst", "Steven", "Garnet" });
-            AssertSimple<double>(new double[] { 26, 32.41, 123.67, 19.5, 7 });
-            AssertSimple<decimal>(new decimal[] { 26m, 32.41m, 123.67m, 19.5m, 7m });
+            AssertSortSimple<int>(new int[] {26, 32, 12, 195, 7});
+            AssertSortSimple<string>(new string[] { "Rob", "Pearl", "Crystal", "Amethyst", "Steven", "Garnet" });
+            AssertSortSimple<double>(new double[] { 26, 32.41, 123.67, 19.5, 7 });
+            AssertSortSimple<decimal>(new decimal[] { 26m, 32.41m, 123.67m, 19.5m, 7m });
         }
 
         // Assert sorter behaves correctly with empty array
-        public virtual void AssertEmpty<T>() where T : System.IComparable
+        public virtual void AssertSortEmpty<T>() where T : System.IComparable
         {
             T[] empty = new T[0];
             T[] result = TestSorter.Sort<T>(empty);
@@ -35,12 +36,18 @@ namespace SorterTests.tests.Sorter
             // Empty array is returned
             Console.WriteLine("Empty array gets sorted: {0}", result.Length == 0);
             Console.WriteLine(string.Join(",", result));
+        }
 
+        // Assert sorter minimum/maximum finder behaves correctly with empty array
+        public virtual void AssertMinMaxEmpty<T>() where T : System.IComparable
+        {
+            T[] empty = new T[0];
             // 0 is returned for Max and Min
             Console.WriteLine("Min: {0}, Max: {1}", TestSorter.FindMax<T>(empty), TestSorter.FindMin<T>(empty));
         }
 
-        public virtual void AssertSingle<T>(T[] lst) where T : System.IComparable
+
+        public virtual void AssertSortSingle<T>(T[] lst) where T : System.IComparable
         {
 
             T[] result = TestSorter.Sort<T>(lst);
@@ -51,7 +58,7 @@ namespace SorterTests.tests.Sorter
             Console.WriteLine("====================");
         }
 
-        public virtual void AssertSimple<T>(T[] lst) where T: System.IComparable
+        public virtual void AssertSortSimple<T>(T[] lst) where T: System.IComparable
         {
             T[] result = TestSorter.Sort<T>(lst);
             T[] defaultResult = new T[lst.Length];
