@@ -34,18 +34,16 @@ namespace Sorted.com.sorted.Implementation
         /// 
         /// <returns>a sorted copy of array lst.</returns>
         /// 
-        protected override T[] PerformSort<T>(T[] lst)
+        protected override void PerformSort<T>(T[] lst)
         {
             int size = lst.Length;
-            T[] result = new T[size];
-            Array.Copy(lst, result, size);
 
             for (int i = 0; i < size; i++)
             {
                 int jMin = i;
                 for (int j = i + 1; j < size; j++ )
                 {
-                    if (result[j].CompareTo(result[jMin]) < 0)
+                    if (lst[j].CompareTo(lst[jMin]) < 0)
                     {
                         jMin = j;
                     }
@@ -53,13 +51,9 @@ namespace Sorted.com.sorted.Implementation
 
                 if (jMin != i)
                 {
-                    T temp = result[i];
-                    result[i] = result[jMin];
-                    result[jMin] = temp;
+                    this.Swap(lst, i, jMin);
                 } // end if
             } // end for : i
-
-            return result;
         }
 
     }

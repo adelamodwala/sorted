@@ -17,6 +17,7 @@
 /// ***************************************************************************
 /// 
 
+using System;
 using System.Linq;
 
 namespace Sorted.com.sorted.Implementation
@@ -34,8 +35,14 @@ namespace Sorted.com.sorted.Implementation
         /// 
         public virtual T[] Sort<T>(T[] lst) where T : System.IComparable
         {
-            T[] sorted = PerformSort<T>(lst);
-            return sorted;
+            // Create a copy of the list
+            int size = lst.Length;
+            T[] result = new T[size];
+            Array.Copy(lst, result, size);
+
+            // Perform the sorting algorithm
+            this.PerformSort<T>(result);
+            return result;
         }
 
         /// <summary>Implement the sort functionality for sorter.</summary>
@@ -45,7 +52,7 @@ namespace Sorted.com.sorted.Implementation
         /// 
         /// <returns>a sorted copy of array lst.</returns>
         /// 
-        protected abstract T[] PerformSort<T>(T[] lst) where T: System.IComparable;
+        protected abstract void PerformSort<T>(T[] lst) where T: System.IComparable;
 
         /// <summary>Find the minimum from an array using implemented sort technique.</summary>
         /// 
@@ -71,6 +78,18 @@ namespace Sorted.com.sorted.Implementation
         {
             T[] result = Sort<T>(lst);
             return result.LastOrDefault();
+        }
+
+        /// <summary>Swap two elements in an array.</summary>
+        /// 
+        /// <param name="T">the generic type that is IComparable.</param>
+        /// <param name="lst">an array of type T.</param>
+        /// 
+        protected virtual void Swap<T>(T[] lst, int a, int b)
+        {
+            T temp = lst[a];
+            lst[a] = lst[b];
+            lst[b] = temp;
         }
 
     }

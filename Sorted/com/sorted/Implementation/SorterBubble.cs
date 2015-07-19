@@ -34,26 +34,21 @@ namespace Sorted.com.sorted.Implementation
         /// 
         /// <returns>a sorted copy of array lst.</returns>
         /// 
-        protected override T[] PerformSort<T>(T[] lst)
+        protected override void PerformSort<T>(T[] lst)
         {
             int size = lst.Length;
-            T[] result = new T[size];
-            Array.Copy(lst, result, size);
 
             for (int n = size; n > 0; n--)
             {
                 for (int i = 1; i <= n - 1; i++)
                 {
-                    if (result[i - 1].CompareTo(result[i]) > 0)
+                    if (lst[i - 1].CompareTo(lst[i]) > 0)
                     {
-                        T temp = result[i - 1];
-                        result[i - 1] = result[i];
-                        result[i] = temp;
+                        this.Swap<T>(lst, i - 1, i);
                     } // end if
                 } // end for : i
             } // end for : n
 
-            return result;
         }
     }
 }
