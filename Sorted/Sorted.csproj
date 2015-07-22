@@ -81,14 +81,18 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="com\sorted\action\implementation\" />
+    <Folder Include="com\sorted\core\implementation\" />
+    <Folder Include="com\sorted\db\implementation\" />
+    <Folder Include="com\sorted\service\implementation\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="com\sorted\Implementation\SorterAbstract.cs" />
-    <Compile Include="com\sorted\Implementation\SorterBubble.cs" />
-    <Compile Include="com\sorted\Implementation\SorterInsert.cs" />
-    <Compile Include="com\sorted\Implementation\SorterSelection.cs" />
-    <Compile Include="com\sorted\ISorter.cs" />
+    <Compile Include="com\sorted\utils\implementation\SorterAbstract.cs" />
+    <Compile Include="com\sorted\utils\implementation\SorterBubble.cs" />
+    <Compile Include="com\sorted\utils\implementation\SorterInsert.cs" />
+    <Compile Include="com\sorted\utils\implementation\SorterSelection.cs" />
+    <Compile Include="com\sorted\utils\ISorter.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,6 +1,6 @@
 ﻿// An interface for Sorter classes
 
-namespace Sorted.com.sorted
+namespace Sorted.com.sorted.utils
 {
     public interface ISorter
     {

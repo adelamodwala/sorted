@@ -20,7 +20,7 @@
 using System;
 using System.Linq;
 
-namespace Sorted.com.sorted.Implementation
+namespace Sorted.com.sorted.utils
 {
     /// <summary>An abstract sorter class that defines a common set of functionality for sorter objects.</summary>
     public abstract class SorterAbstract : ISorter

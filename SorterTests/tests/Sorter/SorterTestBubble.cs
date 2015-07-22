@@ -1,5 +1,5 @@
 ﻿using System;
-using Sorted.com.sorted;
+using Sorted.com.sorted.utils;
 
 namespace SorterTests.tests.Sorter
 {

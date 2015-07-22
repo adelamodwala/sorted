@@ -1,13 +1,13 @@
 ﻿///***************************************************************************
 /// 
 /// Package:        Sorted.com.sorted.Implementation
-/// Class:          SorterBubble
+/// Class:          SorterSelection
 /// 
 /// Project Name:   Sorted
 /// 
 /// Description:
 /// 
-/// An implementation of the Bubble Sort algorithm
+/// An implementation of the Slection Sort algorithm
 /// inherited from the SorterAbstract class
 /// 
 /// @author:      <author>Adel Amodwala</author>
@@ -19,12 +19,12 @@
 
 using System;
 using System.Linq;
-using Sorted.com.sorted;
+using Sorted.com.sorted.utils;
 
-namespace Sorted.com.sorted.Implementation
+namespace Sorted.com.sorted.utils.implementation
 {
-    /// <summary>A bubble sorter.</summary>
-    public class SorterBubble : SorterAbstract
+    /// <summary>An selection sorter.</summary>
+    public class SorterSelection : SorterAbstract
     {
 
         /// <summary>Implement the sort functionality for sorter.</summary>
@@ -38,17 +38,23 @@ namespace Sorted.com.sorted.Implementation
         {
             int size = lst.Length;
 
-            for (int n = size; n > 0; n--)
+            for (int i = 0; i < size; i++)
             {
-                for (int i = 1; i <= n - 1; i++)
+                int jMin = i;
+                for (int j = i + 1; j < size; j++ )
                 {
-                    if (lst[i - 1].CompareTo(lst[i]) > 0)
+                    if (lst[j].CompareTo(lst[jMin]) < 0)
                     {
-                        this.Swap<T>(lst, i - 1, i);
-                    } // end if
-                } // end for : i
-            } // end for : n
+                        jMin = j;
+                    }
+                } // end for : j
 
+                if (jMin != i)
+                {
+                    this.Swap(lst, i, jMin);
+                } // end if
+            } // end for : i
         }
+
     }
 }

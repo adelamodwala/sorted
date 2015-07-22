@@ -1,13 +1,13 @@
 ﻿///***************************************************************************
 /// 
 /// Package:        Sorted.com.sorted.Implementation
-/// Class:          SorterSelection
+/// Class:          SorterInsert
 /// 
 /// Project Name:   Sorted
 /// 
 /// Description:
 /// 
-/// An implementation of the Slection Sort algorithm
+/// An implementation of the Insertion Sort algorithm
 /// inherited from the SorterAbstract class
 /// 
 /// @author:      <author>Adel Amodwala</author>
@@ -19,12 +19,12 @@
 
 using System;
 using System.Linq;
-using Sorted.com.sorted;
+using Sorted.com.sorted.utils;
 
-namespace Sorted.com.sorted.Implementation
+namespace Sorted.com.sorted.utils.implementation
 {
-    /// <summary>An selection sorter.</summary>
-    public class SorterSelection : SorterAbstract
+    /// <summary>An insertion sorter.</summary>
+    public class SorterInsert : SorterAbstract
     {
 
         /// <summary>Implement the sort functionality for sorter.</summary>
@@ -38,22 +38,14 @@ namespace Sorted.com.sorted.Implementation
         {
             int size = lst.Length;
 
-            for (int i = 0; i < size; i++)
+            for (int i = 1; i < size; i++)
             {
-                int jMin = i;
-                for (int j = i + 1; j < size; j++ )
-                {
-                    if (lst[j].CompareTo(lst[jMin]) < 0)
-                    {
-                        jMin = j;
-                    }
-                } // end for : j
-
-                if (jMin != i)
-                {
-                    this.Swap(lst, i, jMin);
-                } // end if
-            } // end for : i
+                int j = i;
+                while(j > 0 && lst[j - 1].CompareTo(lst[j]) > 0){
+                    this.Swap(lst, j - 1, j);
+                    j--;
+                } // end while
+            }// end for
         }
 
     }

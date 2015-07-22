@@ -1,13 +1,13 @@
 ﻿///***************************************************************************
 /// 
 /// Package:        Sorted.com.sorted.Implementation
-/// Class:          SorterInsert
+/// Class:          SorterBubble
 /// 
 /// Project Name:   Sorted
 /// 
 /// Description:
 /// 
-/// An implementation of the Insertion Sort algorithm
+/// An implementation of the Bubble Sort algorithm
 /// inherited from the SorterAbstract class
 /// 
 /// @author:      <author>Adel Amodwala</author>
@@ -19,12 +19,12 @@
 
 using System;
 using System.Linq;
-using Sorted.com.sorted;
+using Sorted.com.sorted.utils;
 
-namespace Sorted.com.sorted.Implementation
+namespace Sorted.com.sorted.utils.implementation
 {
-    /// <summary>An insertion sorter.</summary>
-    public class SorterInsert : SorterAbstract
+    /// <summary>A bubble sorter.</summary>
+    public class SorterBubble : SorterAbstract
     {
 
         /// <summary>Implement the sort functionality for sorter.</summary>
@@ -38,15 +38,17 @@ namespace Sorted.com.sorted.Implementation
         {
             int size = lst.Length;
 
-            for (int i = 1; i < size; i++)
+            for (int n = size; n > 0; n--)
             {
-                int j = i;
-                while(j > 0 && lst[j - 1].CompareTo(lst[j]) > 0){
-                    this.Swap(lst, j - 1, j);
-                    j--;
-                } // end while
-            }// end for
-        }
+                for (int i = 1; i <= n - 1; i++)
+                {
+                    if (lst[i - 1].CompareTo(lst[i]) > 0)
+                    {
+                        this.Swap<T>(lst, i - 1, i);
+                    } // end if
+                } // end for : i
+            } // end for : n
 
+        }
     }
 }
