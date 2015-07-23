@@ -88,11 +88,11 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="com\sorted\utils\implementation\SorterAbstract.cs" />
-    <Compile Include="com\sorted\utils\implementation\SorterBubble.cs" />
-    <Compile Include="com\sorted\utils\implementation\SorterInsert.cs" />
-    <Compile Include="com\sorted\utils\implementation\SorterSelection.cs" />
-    <Compile Include="com\sorted\utils\ISorter.cs" />
+    <Compile Include="com\sorted\utils\sorters\implementation\SorterAbstract.cs" />
+    <Compile Include="com\sorted\utils\sorters\implementation\SorterBubble.cs" />
+    <Compile Include="com\sorted\utils\sorters\implementation\SorterInsert.cs" />
+    <Compile Include="com\sorted\utils\sorters\implementation\SorterSelection.cs" />
+    <Compile Include="com\sorted\utils\sorters\ISorter.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

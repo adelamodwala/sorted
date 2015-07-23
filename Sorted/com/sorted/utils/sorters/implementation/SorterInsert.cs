@@ -21,7 +21,7 @@ using System;
 using System.Linq;
 using Sorted.com.sorted.utils;
 
-namespace Sorted.com.sorted.utils.implementation
+namespace Sorted.com.sorted.utils.sorters
 {
     /// <summary>An insertion sorter.</summary>
     public class SorterInsert : SorterAbstract

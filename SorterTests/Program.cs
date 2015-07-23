@@ -1,7 +1,7 @@
 ﻿using System;
 using SorterTests.tests.Sorter;
 using Sorted.com.sorted.utils;
-using Sorted.com.sorted.utils.implementation;
+using Sorted.com.sorted.utils.sorters;
 
 namespace SorterTests
 {
