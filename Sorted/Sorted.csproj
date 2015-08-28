@@ -39,6 +39,50 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Spring.Aop, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Services, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Spring.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Testing.Microsoft, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Spring.Testing.Microsoft.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Testing.NUnit, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Spring.Testing.NUnit.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web.Extensions, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Spring.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web.Mvc, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Spring.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web.Mvc3, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Spring.Web.Mvc3.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web.Mvc4, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Spring.Web.Mvc4.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,6 +110,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.xml" />
+    <Content Include="Config\default\Actions.xml" />
+    <Content Include="Config\default\DAO.xml" />
+    <Content Include="Config\default\Services.xml" />
     <Content Include="DLL\Spring.Aop.dll" />
     <Content Include="DLL\Spring.Core.dll" />
     <Content Include="DLL\Spring.Data.dll" />
@@ -81,13 +128,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="com\sorted\action\implementation\" />
     <Folder Include="com\sorted\core\implementation\" />
     <Folder Include="com\sorted\db\implementation\" />
-    <Folder Include="com\sorted\service\implementation\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="com\sorted\action\implementation\AbstractActionImpl.cs" />
+    <Compile Include="com\sorted\action\implementation\SorterActionImpl.cs" />
+    <Compile Include="com\sorted\action\ISorterAction.cs" />
+    <Compile Include="com\sorted\dao\implementation\AbstractSorterDAOImpl.cs" />
+    <Compile Include="com\sorted\dao\implementation\SorterDAOImpl.cs" />
+    <Compile Include="com\sorted\dao\ISorterDAO.cs" />
+    <Compile Include="com\sorted\service\implementation\AbstractServiceImpl.cs" />
+    <Compile Include="com\sorted\service\implementation\SorterServiceImpl.cs" />
+    <Compile Include="com\sorted\service\ISorterService.cs" />
     <Compile Include="com\sorted\utils\sorters\implementation\SorterAbstract.cs" />
     <Compile Include="com\sorted\utils\sorters\implementation\SorterBubble.cs" />
     <Compile Include="com\sorted\utils\sorters\implementation\SorterInsert.cs" />

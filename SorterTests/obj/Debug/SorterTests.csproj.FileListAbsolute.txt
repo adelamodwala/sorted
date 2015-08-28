@@ -6,3 +6,11 @@ C:\Users\Adel\Development\Sorted\SorterTests\bin\Debug\Sorted.dll
 C:\Users\Adel\Development\Sorted\SorterTests\bin\Debug\Sorted.pdb
 C:\Users\Adel\Development\Sorted\SorterTests\obj\Debug\SorterTests.exe
 C:\Users\Adel\Development\Sorted\SorterTests\obj\Debug\SorterTests.pdb
+C:\Users\Adel.Amodwala\Development\sorted\SorterTests\bin\Debug\SorterTests.exe.config
+C:\Users\Adel.Amodwala\Development\sorted\SorterTests\bin\Debug\SorterTests.exe
+C:\Users\Adel.Amodwala\Development\sorted\SorterTests\bin\Debug\SorterTests.pdb
+C:\Users\Adel.Amodwala\Development\sorted\SorterTests\bin\Debug\Sorted.dll
+C:\Users\Adel.Amodwala\Development\sorted\SorterTests\bin\Debug\Sorted.pdb
+C:\Users\Adel.Amodwala\Development\sorted\SorterTests\obj\Debug\SorterTests.csprojResolveAssemblyReference.cache
+C:\Users\Adel.Amodwala\Development\sorted\SorterTests\obj\Debug\SorterTests.exe
+C:\Users\Adel.Amodwala\Development\sorted\SorterTests\obj\Debug\SorterTests.pdb

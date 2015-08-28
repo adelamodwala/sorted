@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <description>The Sorted object definitions for the service tier.</description>
+
+  <object id="SorterService" type="Sorted.com.sorted.service.implementation.SorterServiceImpl">
+    <description>The action class that handles the services for sorters.</description>
+    <property name="sorterDAO" ref="SorterDAO" />
+  </object>
+
+</objects>
