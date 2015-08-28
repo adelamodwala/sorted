@@ -7,7 +7,5 @@
 </head>
 <body>
     Hiya Bob!
-    <%@ Page Language="C#" %>
-    <% =SorterAction.getSorters() %>>
 </body>
 </html>

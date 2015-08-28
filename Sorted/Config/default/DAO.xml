@@ -8,15 +8,15 @@
     <property name="availableSorters" ref="AvailableSorters" />
   </object>
 
-  <object id="AvailableSorters" type="Sorted.com.sorted.utils.ISorter[]">
+  <object id="AvailableSorters" type="Sorted.com.sorted.utils.sorters.ISorter[]">
     <constructor-arg value="3" />
-    <property name="[0]" ref="BubbleSorter" />
-    <property name="[1]" ref="InsertSorter" />
-    <property name="[2]" ref="SelectionSorter" />
+    <property name="[0]" ref="InsertSorter" />
+    <property name="[1]" ref="SelectionSorter" />
+    <property name="[2]" ref="BubbleSorter" />
   </object>
 
-  <object id="BubbleSorter" type="Sorted.com.sorted.utils.implementation.SorterBubble" />
-  <object id="InsertSorter" type="Sorted.com.sorted.utils.implementation.SorterInsert" />
-  <object id="SelectionSorter" type="Sorted.com.sorted.utils.implementation.SorterSelection" />
+  <object id="InsertSorter" type="Sorted.com.sorted.utils.sorters.SorterInsert" />
+  <object id="SelectionSorter" type="Sorted.com.sorted.utils.sorters.SorterSelection" />
+  <object id="BubbleSorter" type="Sorted.com.sorted.utils.sorters.SorterBubble" />
 
 </objects>

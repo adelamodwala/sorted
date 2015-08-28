@@ -26,6 +26,11 @@ namespace Sorted.com.sorted.utils.sorters
     public abstract class SorterAbstract : ISorter
     {
 
+        public SorterAbstract()
+        {
+            System.Diagnostics.Debug.WriteLine("Instantiating a sorter!");
+        }
+
         /// <summary>Copy and sort an array of items.</summary>
         /// 
         /// <param name="T">the generic type that is IComparable.</param>

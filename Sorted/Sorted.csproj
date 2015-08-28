@@ -38,6 +38,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>DLL\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net">
+      <HintPath>DLL\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>DLL\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Spring.Aop, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -113,6 +122,9 @@
     <Content Include="Config\default\Actions.xml" />
     <Content Include="Config\default\DAO.xml" />
     <Content Include="Config\default\Services.xml" />
+    <Content Include="DLL\Common.Logging.dll" />
+    <Content Include="DLL\Common.Logging.Log4Net.dll" />
+    <Content Include="DLL\log4net.dll" />
     <Content Include="DLL\Spring.Aop.dll" />
     <Content Include="DLL\Spring.Core.dll" />
     <Content Include="DLL\Spring.Data.dll" />
